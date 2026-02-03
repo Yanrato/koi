@@ -37,3 +37,10 @@ html.dark {
     @apply bg-primary text-primary-contrast px-4 py-2 transition hover:opacity-80;
   }
 }
+
+input,
+textarea,
+select {
+  @apply bg-background text-text border border-gray-300 rounded;
+}
+
