@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* 🌞 LIGHT (padrão) */
+:root {
+  --color-text: #000000;
+  --color-error: #980000;
+  --color-paper: #f3f3f3;
+  --color-primary: #dd571c;
+  --color-primary-contrast: #ffffff;
+  --color-secondary: rgb(94, 190, 199);
+  --color-background: #d1d1d1;
+}
+
+/* 🌙 DARK */
+html.dark {
+  --color-text: #ffffff;
+  --color-error: #f80000;
+  --color-paper: #121212;
+  --color-primary: #ff784e;
+  --color-primary-contrast: #000000;
+  --color-secondary: rgb(146, 206, 232);
+  --color-background: #464646;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-background text-text min-h-screen;
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-primary text-primary-contrast px-4 py-2 transition hover:opacity-80;
+  }
+}
