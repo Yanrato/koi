@@ -14,38 +14,27 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function Cadastro() {
+export default function Login() {
   return (
-    <main className="flex min-h-screen items-center justify-center -mt-32 text-muted-foreground">
+      <main className="flex min-h-screen items-center justify-center -mt-32 text-muted-foreground">
       <Card className="w-full max-w-sm shadow-xl">
         <CardHeader>
           <div className=" flex items-center justify-between">
             <div>
-              <CardTitle>Cadastro</CardTitle>
+              <CardTitle>Login</CardTitle>
               <CardDescription>
-                Use seu Email para criar uma conta
+                Digite seu email e senha para acessar sua conta.
               </CardDescription>
             </div>
 
-            <Link href="/login">
-            <p className="text-sm">Já possui uma conta?</p>
-              <Button variant="link">Login</Button>
-            
+            <Link href="/cadastro">
+              <Button variant="link">Cadastro</Button>
             </Link>
           </div>
         </CardHeader>
 
         <CardContent>
           <form className="space-y-6">
-              <div className="grid gap-2">
-              <Label htmlFor="text">Usuario</Label>
-              <Input
-                id="text"
-                type="text"
-                placeholder="Digite seu nome de usuário"
-                required
-              />
-            </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -58,11 +47,10 @@ export default function Cadastro() {
 
             <div className="grid gap-2">
               <div className="flex items-center justify-between">
-                <Label htmlFor="password">Crie uma senha</Label>
-              </div>
-              <Input id="password" type="password" required />
-              <div className="flex items-center justify-between">
-                <Label htmlFor="password">Confirme sua senha</Label>
+                <Label htmlFor="password">Senha</Label>
+                <a className="text-sm underline-offset-4 hover:underline">
+                  Esqueceu a senha?
+                </a>
               </div>
               <Input id="password" type="password" required />
             </div>

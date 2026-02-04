@@ -2,10 +2,12 @@
 import { Nunito } from "next/font/google";
 import type { Metadata } from "next";
 
+
 //internos
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import "./globals.css";
+
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -21,10 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={nunito.className}>
+      <body className={(nunito.className, "min-h-screen bg-background text-text antialiased")}>
         <ThemeProvider>
           <Header />
           <main className="min-h-screen">
+            
             {children}
           </main>
         </ThemeProvider>
